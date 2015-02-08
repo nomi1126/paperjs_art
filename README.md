@@ -1,3 +1,3 @@
 # paperjs_art
-2015年 1月19日 月曜日 00時47分50秒 JST
-![](art/art.png)
+2015年 2月 8日 日曜日 13時55分35秒 JST
+![](art/art.gif)
