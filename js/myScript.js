@@ -1,12 +1,38 @@
 var mousePoint = view.center;
 var amount = 25;
-var colors = ['pink', 'purple', 'blue', 'red'];
+var colors = [new Color({
+            hue:Math.random() * 360,
+            saturation:1,
+            brightness:1
+}),
+    new Color({
+            hue:Math.random() * 360,
+            saturation:1,
+            brightness:1
+}),
+new Color({
+            hue:Math.random() * 360,
+            saturation:1,
+            brightness:1
+}),
+new Color({
+            hue:Math.random() * 360,
+            saturation:1,
+            brightness:1
+}),
+new Color({
+            hue:Math.random() * 360,
+            saturation:1,
+            brightness:1
+})];
+
+
 
 for (var i = 0; i < amount; i++) {
-    var rect = new Rectangle([0, 0], [25, 25]);
+    var rect = new Rectangle([0, 0], [100, 100]);
     rect.center = mousePoint;
-    var path = new Path.Rectangle(rect, 11);
-    path.fillColor = colors[i % 4];
+    var path = new Path.Rectangle(rect, 8);
+    path.fillColor = colors[i % colors.length];
     var scale = (1 - i / amount) * 20;
     path.scale(scale);
 }
